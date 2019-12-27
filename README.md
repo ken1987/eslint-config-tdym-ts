@@ -81,11 +81,15 @@ npm install eslint-config-tdym-ts -D
 ## 推荐配置
 
 ```js
+const path = require('path')
 const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
   root: true,
-  extends: ['eslint-config-tdym-ts'],
+  extends: ['tdym-ts'],
+  parserOptions: {
+    project: path.resolve(__dirname, './tsconfig.json'),
+  },
   rules: {
     'no-console': isProduction ? 'warn' : 'off',
     'no-debugger': isProduction ? 'warn' : 'off',
