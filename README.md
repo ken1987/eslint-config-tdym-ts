@@ -5,6 +5,7 @@
 - 核心库：[Vue][1]
 - 代码检查：[eslint][10]
 - 格式化工具：[prettier][2]
+- [typescript][11]
 
 我们的目标是：帮助团队在协作开发时保持代码规范与代码风格的一致性。通过配置化、工具化，更方便的共享经验，新加入的成员不用死背规范，更易于上手。经过多个项目的实践，我们结合社区方案与自身需求，针对 Vue 开发中的一些经验进行了[归纳总结](Document.md)，并创建了此项目。
 
@@ -12,15 +13,16 @@
 
 - eslint ^5.0.0 || ^6.0.0
 - prettier >= 1.13.0
+- typescript >= 3.0.0
 
 ## 用法
 
 ### 安装依赖包以及上述版本依赖
 
 ```shell
-yarn add eslint-config-tdym -D
+yarn add eslint-config-tdym-ts -D
 # or
-npm install eslint-config-tdym -D
+npm install eslint-config-tdym-ts -D
 ```
 
 ### prettier 配置
@@ -74,6 +76,7 @@ npm install eslint-config-tdym -D
 - [airbnb javascript 风格指南][3]
 - [vue 风格指南][4]
 - [prettier 风格指南][5]
+- typescript 风格指南：todo
 
 ## 推荐配置
 
@@ -82,7 +85,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
   root: true,
-  extends: ['eslint-config-tdym'],
+  extends: ['eslint-config-tdym-ts'],
   rules: {
     'no-console': isProduction ? 'warn' : 'off',
     'no-debugger': isProduction ? 'warn' : 'off',
@@ -99,3 +102,4 @@ module.exports = {
 [8]: https://github.com/prettier/prettier/issues/6061
 [9]: https://www.zhihu.com/question/20298345/answer/14670020
 [10]: https://eslint.org/
+[11]: http://www.typescriptlang.org/
