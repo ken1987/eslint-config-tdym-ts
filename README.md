@@ -1,4 +1,4 @@
-# eslint-config-tdym
+# eslint-config-tdym-ts
 
 ## 背景
 
