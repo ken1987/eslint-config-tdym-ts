@@ -1,8 +1,36 @@
+const { rules } = require('@typescript-eslint/eslint-plugin/dist/configs/all')
+
 const {
-  rules,
-} = require('@typescript-eslint/eslint-plugin/dist/configs/all.json')
+  overrides,
+} = require('@typescript-eslint/eslint-plugin/dist/configs/eslint-recommended')
 
 const fix = {
+  '@typescript-eslint/explicit-member-accessibility': [
+    'error',
+    {
+      accessibility: 'no-public',
+    },
+  ],
+  '@typescript-eslint/restrict-template-expressions': [
+    'error',
+    {
+      allowNumber: true,
+    },
+  ],
+  '@typescript-eslint/init-declarations': 'off',
+  /**
+   * 导出的函数或类中的 public 方法必须定义输入输出参数的类型
+   */
+  '@typescript-eslint/explicit-module-boundary-types': 'off',
+  /**
+   * 函数的参数必须设置为 readonly
+   */
+  '@typescript-eslint/prefer-readonly-parameter-types': 'off',
+  /**
+   * 禁止使用 // @ts-ignore // @ts-nocheck // @ts-check
+   * @reason 这种注释本身就是对特殊代码的说明
+   */
+  '@typescript-eslint/ban-ts-comment': 'off',
   /**
    * 类型定义
    */
@@ -16,16 +44,6 @@ const fix = {
       propertyDeclaration: false,
       variableDeclaration: false,
       memberVariableDeclaration: false,
-    },
-  ],
-
-  /**
-   * 多余的条件判断
-   */
-  '@typescript-eslint/no-unnecessary-condition': [
-    'error',
-    {
-      ignoreRhs: true,
     },
   ],
 
@@ -155,6 +173,7 @@ module.exports = {
     },
   },
   overrides: [
+    ...overrides,
     {
       files: ['*.ts', '*.tsx'],
       rules: {

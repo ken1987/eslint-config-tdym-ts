@@ -1,5 +1,19 @@
-import a from './js2'
+import js2 from './js2'
+
+class A {
+  a = 1
+
+  async b() {
+    await (this.a + js2.a)
+  }
+
+  c() {
+    this.b()
+  }
+}
 
 export default {
-  a,
+  a() {
+    return new A()
+  },
 }

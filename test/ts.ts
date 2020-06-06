@@ -5,9 +5,14 @@ export default {
 
     const b = '1'
 
+    let c
+    c = 2
+    c = 3
+
     return {
       a: bbb,
       b,
+      c,
     }
   },
 }
