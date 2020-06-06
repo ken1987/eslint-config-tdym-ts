@@ -4,6 +4,7 @@ class A {
   a = 1
 
   async b() {
+    this.a++
     await (this.a + js2.a)
   }
 

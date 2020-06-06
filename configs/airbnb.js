@@ -9,6 +9,7 @@ const configs = {
     },
   },
   rules: {
+    'no-plusplus': 'off',
     'import/extensions': [
       'error',
       'always',
