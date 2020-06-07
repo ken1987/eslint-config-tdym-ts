@@ -87,9 +87,6 @@ module.exports = {
   // 使用 @ts-expect-error 可以避免对不会报错的代码设置了 @ts-ignore
   '@typescript-eslint/prefer-ts-expect-error': 'off',
 
-  // async 函数的返回值必须是 Promise
-  '@typescript-eslint/promise-function-async': 'off',
-
   // 使用 sort 时必须传入比较函数
   '@typescript-eslint/require-array-sort-compare': 'off',
 

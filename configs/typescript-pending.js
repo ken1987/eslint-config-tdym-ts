@@ -33,17 +33,17 @@ module.exports = {
   '@typescript-eslint/no-type-alias': 'off',
 
   // 禁止使用 any
-  '@typescript-eslint/no-explicit-any': 'off',
+  // '@typescript-eslint/no-explicit-any': 'off',
+
+  // 禁止函数的返回值的类型是 any
+  // '@typescript-eslint/no-unsafe-return': 'off',
 
   // 禁止将变量或属性的类型设置为 any
-  '@typescript-eslint/no-unsafe-assignment': 'off',
+  // '@typescript-eslint/no-unsafe-assignment': 'off',
 
   // 禁止调用 any 类型的变量上的方法
   '@typescript-eslint/no-unsafe-call': 'off',
 
   // 禁止获取 any 类型的变量中的属性
   '@typescript-eslint/no-unsafe-member-access': 'off',
-
-  // 禁止函数的返回值的类型是 any
-  '@typescript-eslint/no-unsafe-return': 'off',
 }

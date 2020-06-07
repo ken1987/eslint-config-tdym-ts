@@ -59,15 +59,9 @@ module.exports = {
   ],
 
   // 禁止无用的表达式
+  // bug: https://github.com/typescript-eslint/typescript-eslint/issues/1856
   'no-unused-expressions': 'off',
-  '@typescript-eslint/no-unused-expressions': [
-    'error',
-    {
-      allowShortCircuit: false,
-      allowTernary: false,
-      allowTaggedTemplates: false,
-    },
-  ],
+  '@typescript-eslint/no-unused-expressions': 'off',
 
   // 已定义的变量必须使用
   'no-unused-vars': 'off',
