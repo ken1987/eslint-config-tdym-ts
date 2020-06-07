@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tdym-ts",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "通过配置化，帮助团队协作开发时保持代码规范与代码风格一致。",
   "license": "MIT",
   "repository": "ken1987/eslint-config-tdym-ts",
