@@ -59,16 +59,20 @@ module.exports = {
   ],
 
   // 禁止无用的表达式
-  // bug: https://github.com/typescript-eslint/typescript-eslint/issues/1856
   'no-unused-expressions': 'off',
-  '@typescript-eslint/no-unused-expressions': 'off',
+  '@typescript-eslint/no-unused-expressions': [
+    'error',
+    {
+      allowShortCircuit: false,
+      allowTernary: false,
+      allowTaggedTemplates: false,
+    },
+  ],
 
   // 已定义的变量必须使用
+  // bug: https://github.com/typescript-eslint/typescript-eslint/issues/1856
   'no-unused-vars': 'off',
-  '@typescript-eslint/no-unused-vars': [
-    'error',
-    { vars: 'all', args: 'after-used', ignoreRestSiblings: true },
-  ],
+  '@typescript-eslint/no-unused-vars': 'off',
 
   // 禁止在定义变量之前就使用它
   'no-use-before-define': 'off',
