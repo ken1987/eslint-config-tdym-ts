@@ -1,17 +1,15 @@
 class A {
   a = 1
 
-  async b() {
-    try {
-      this.a++
-      await Promise.resolve(this.a)
-    } catch (error) {
-      console.error(error)
-    }
+  b() {
+    console.log(this.a)
   }
 
   c() {
+    this.a = 2
     this.b()
+
+    window.addEventListener('error', this.b.bind(this))
   }
 }
 
