@@ -76,7 +76,7 @@ npm install eslint-config-tdym-ts -D
 - [airbnb javascript 风格指南][3]
 - [vue 风格指南][4]
 - [prettier 风格指南][5]
-- typescript 风格指南：todo
+- [typescript 风格指南][12]
 
 ## 推荐配置
 
@@ -107,3 +107,4 @@ module.exports = {
 [9]: https://www.zhihu.com/question/20298345/answer/14670020
 [10]: https://eslint.org/
 [11]: http://www.typescriptlang.org/
+[12]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules
